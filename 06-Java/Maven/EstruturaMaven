@@ -1,0 +1,67 @@
+Para saber mais: estrutura de diretório dos projetos Maven
+Próxima Atividade
+
+A estrutura de diretórios padrão de um projeto Maven segue uma convenção estabelecida pelo Maven, que ajuda a organizar os diferentes tipos de arquivos e recursos do projeto de forma consistente. Ao criar o projeto pelo site Spring Initializr e descompactá-lo, nos deparamos com a seguinte estrutura:
+
+Vamos entender a estrutura de diretórios e arquivos que aparecem ao abrir esse projeto descompactado no IntelliJ:
+
+.idea: A pasta .idea é uma pasta oculta criada pelo IntelliJ IDEA que contém arquivos relacionados à configuração do projeto, tais quais:
+
+.idea/workspace.xml: Este arquivo contém as configurações do workspace (espaço de trabalho) do projeto no IntelliJ IDEA. Ele inclui informações sobre as janelas abertas, a configuração da aparência da IDE, as ferramentas usadas, entre outros.
+
+.idea/modules.xml: Este arquivo lista os módulos do projeto e suas configurações associadas. Ele contém informações sobre as dependências do módulo, os diretórios de código-fonte, os recursos, as configurações de compilação, entre outros.
+
+.idea/*.iml: Existem arquivos .iml correspondentes a cada módulo do projeto. Esses arquivos contêm informações específicas do módulo, como as dependências do módulo, as configurações de compilação, os diretórios de código-fonte, entre outros.
+
+.idea/misc.xml: Este arquivo contém configurações diversas do projeto, como o layout da janela, as preferências do usuário, a lista de arquivos recentes, as configurações de controle de versão, entre outros.
+
+.idea/vcs.xml: Este arquivo contém as configurações do controle de versão do projeto, como a integração com sistemas de controle de versão, como Git, Subversion, entre outros.
+
+.idea/compiler.xml: Este arquivo contém as configurações do compilador para o projeto, como nível de compatibilidade do Java, opções de compilação, entre outros.
+
+É importante ressaltar que os arquivos dentro da pasta .idea são específicos do ambiente do IntelliJ IDEA e não são necessários para a execução e o funcionamento do projeto em si. Esses arquivos contêm informações de configuração relacionadas ao ambiente de desenvolvimento, preferências do usuário e integração com ferramentas externas. Eles geralmente são ignorados pelo controle de versão (como Git) para evitar conflitos entre as pessoas desenvolvedoras com diferentes configurações de ambiente.
+
+.mvn: A pasta .mvn é uma pasta especial que pode ser encontrada em um projeto Spring Boot com Maven. Ela é usada para armazenar arquivos e recursos relacionados ao Maven Wrapper, uma ferramenta que permite executar comandos Maven sem precisar ter o Maven instalado globalmente no sistema.
+
+Dentro da pasta .mvn, você pode encontrar:
+
+.mvn/wrapper: Esta pasta contém os arquivos necessários para o Maven Wrapper funcionar. Os principais arquivos são:
+
+maven-wrapper.jar: O JAR do Maven Wrapper, que é responsável por fazer o download do Maven em uma versão específica, caso não esteja presente localmente no sistema. maven-wrapper.properties: Um arquivo de propriedades que especifica a versão do Maven a ser usada pelo Maven Wrapper.
+
+A utilização do Maven Wrapper tem algumas vantagens, como garantir que todos as pessoas desenvolvedoras do projeto estejam usando a mesma versão do Maven, facilitar a configuração do ambiente de desenvolvimento e eliminar a necessidade de instalar o Maven separadamente.
+
+Ao executar comandos Maven em um projeto Spring Boot com o Maven Wrapper, você pode utilizar o script mvnw (ou mvnw.cmd no Windows) que está localizado na raiz do projeto. Ele é responsável por invocar o Maven Wrapper e executar os comandos Maven desejados, como compilar o projeto, empacotá-lo, executar testes, entre outros.
+
+Em resumo, a pasta .mvn contém o Maven Wrapper, uma ferramenta que permite a execução de comandos Maven em um projeto Spring Boot sem a necessidade de ter o Maven instalado globalmente no sistema. Isso ajuda a garantir a consistência do ambiente de desenvolvimento e facilita a configuração do projeto em diferentes máquinas.
+
+src: O diretório raiz para os arquivos-fonte e recursos do projeto.
+
+src/main: O diretório para o código-fonte e recursos principais do projeto.
+
+src/main/java: O diretório para os arquivos Java do projeto.
+
+src/main/resources: O diretório para os recursos não Java, como arquivos de propriedades, arquivos XML, etc.
+
+src/main/resources/templates: O diretório para os recursos visuais da aplicação web, como arquivos JSP, HTML, CSS, JavaScript, etc.
+
+src/test: O diretório para os arquivos de teste do projeto.
+
+src/test/java: O diretório para os arquivos de teste Java.
+
+src/test/resources: O diretório para os recursos de teste.
+
+.gitignore: O arquivo .gitignore é usado em projetos Git para especificar arquivos e diretórios que devem ser ignorados pelo controle de versão Git. Quando você adiciona um arquivo ou diretório ao .gitignore, o Git não irá rastreá-los nem incluí-los nas operações de commit e merge.
+
+HELP.md: No contexto do projeto Spring, o arquivo HELP.md é um arquivo de documentação que fornece informações úteis sobre o projeto, suas funcionalidades e como utilizá-lo. O arquivo HELP.md é gerado automaticamente pelo Spring Boot durante a criação do projeto.
+
+O conteúdo do arquivo HELP.md é baseado nas informações extraídas do arquivo pom.xml (ou do arquivo de configuração equivalente) e de outros metadados do projeto. Ele inclui detalhes sobre as dependências do projeto, as configurações disponíveis, os perfis ativos, as propriedades de configuração personalizadas, entre outros.
+
+O objetivo principal do arquivo HELP.md é fornecer uma documentação prática e concisa para as pessoas desenvolvedoras e usuárias do projeto Spring. Ele pode ser útil para entender a estrutura do projeto, as dependências utilizadas, as configurações disponíveis e outras informações relevantes. Além disso, o arquivo HELP.md pode ser personalizado para incluir informações específicas do projeto, como exemplos de uso, notas de lançamento, dicas de depuração, entre outros.
+
+Em resumo, o arquivo HELP.md no projeto Spring é uma documentação gerada automaticamente que fornece informações úteis sobre o projeto, suas dependências, configurações e outras informações relevantes. Ele pode ser usado como uma referência prática para entender e utilizar o projeto de forma eficaz.
+
+pom.xml: O arquivo de configuração do Maven que define as configurações, dependências e plugins do projeto.
+
+Lembrando que aqui na Alura temos um curso específico sobre Maven. Caso queira aprofundar seus conhecimentos nessa ferramenta, basta acessá-lo aqui.
+

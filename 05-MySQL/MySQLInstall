@@ -1,0 +1,27 @@
+Instalando no Linux
+
+Para instalar o MySQL no linux, é necessário ter a senha do root (sudo). Com a senha em mãos podemos iniciar.
+
+É interessante confirmar se tem alguma atualização do apt (a ferramenta de pacote do Linux).
+
+sudo apt update
+
+Após confirmar se o apt está atualizado podemos fazer a instalação do MySQL.
+
+sudo apt install mysql-server
+
+Com isso, podemos verificar se o MySQL está funcionando:
+
+service mysql status
+
+Caso seja necessário parar o serviço de banco de dados MySQL:
+
+sudo service mysql stop
+
+E para iniciar o serviço de banco de dados MySQL:
+
+sudo service mysql start
+
+Caso necessite configurar o MySQL:
+
+sudo mysql_secure_installation

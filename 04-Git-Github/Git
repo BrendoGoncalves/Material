@@ -1,0 +1,83 @@
+git init
+
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
+
+git config --global user.name "Seu nome aqui"
+git config --global user.email "seu@email.aqui"
+
+git config user.name
+git config user.email
+
+git branch -m master main
+git push -u origin main
+
+git status
+
+git add seu_arquivo
+git add .
+
+git commit -m "sua mensagem"
+
+git log
+git log --oneline
+git log -p
+git log -n numeroDeCommits
+got log --graph
+
+git init --bare
+
+git remote
+git remote -v
+git remote add nomeDoSeuRepositorioRemoto caminhoDoRepositorioRemoto
+git remote rename origin novoNomeDoRepositorioRemoto
+
+git clone caminhoDoProjeto
+git clone caminhoDoProjeto NovoNome
+
+git push repositorioRemotoDeDestino ramoRepositorioRemoto
+
+git pull repositorioRemotoDeOrigem ramoRepositorioRemoto
+
+git remote add origin https://github.com/BrendoGoncalves/Projeto.git
+git push -u origin master
+
+git branch
+git branch novaBranch
+git checkout novaBranch
+git checkout -b novaBranch
+
+git merge branchQueSeraJuntada
+
+git rebase branchInserida
+
+git checkout -- seuArquivo
+git restore arquivo
+
+git reset HEAD seuArquivo
+git restore --staged arquivo
+
+git revert hashDoCommit
+
+git stash
+git stash list
+git stash aply 0
+git stash drop
+git stash pop
+
+git checkout hashCommitRecuperado
+
+git diff
+git diff primeiraBranch..segundaBranch
+git diff primeiroCommit..segundoCommit
+
+git tag -a nomeDaVersao -m "mensagem"
+git push nomeDaVersao
+git tag
+
+.gitignore
+arquivo.txt
+diretorio/
+
+https://git-scm.com/about
+https://git-school.github.io/visualizing-git/

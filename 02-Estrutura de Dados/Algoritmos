@@ -1,0 +1,62 @@
+Algoritmos
+
+Ordenação
+    Inserção (Insertion Sort)
+    Bolha (Bubblesort)
+    Seleção (Selection Sort)
+    Junção (Merge Sort)
+    Rápida (Quick Sort)
+    Monte (Heap Sort)
+    Contagem (Counting Sort)
+    Raiz (Radix Sort)
+
+    Comparisons & Swaps
+    Best Case
+    Worst Case
+    Avarege Case
+
+        O(n), O(n²), O(n log(n))
+
+Iterativo (Iterative)
+
+    n! = n * (n - 1) * (n - 2) ... * 2 * 1
+
+    int iterativo(int n){
+        int fatorial = 1;
+        while(n >= 1){
+            fatorial *= n;
+            --n;
+        }
+        return fatorial;
+    }
+
+Recursivo (Recursive)
+
+    n! = n * (n - 1)!
+
+    int recursivo(int n){
+        if(n == 0){
+            return 1;
+        }else{
+            return n * recursivo(n - 1);
+        }
+    }
+
+
+Algoritmo de Divisão e Conquista
+(Divide and Conquer)
+
+Algoritmo Guloso
+(Greed Algorithm)
+
+Busca Sequencial (Sequential Search)
+    O(n)
+
+Busca Binária (Binary Search)
+    Ordenado
+    
+    Início
+    Centro (n/2)
+    Final
+
+    O(log2 n)

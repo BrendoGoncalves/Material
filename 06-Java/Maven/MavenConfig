@@ -1,0 +1,99 @@
+Depois de baixar o diretório do Maven no site oficial (https://maven.apache.org/download.cgi), precisamos configurar as variáveis de ambiente para que os comandos mvn (Maven) sejam reconhecidos em todos diretórios do sistema operacional.
+
+Repositório central de dependências do Maven: https://mvnrepository.com/
+
+brendo@BrendoDell12:~$ mv Downloads/apache-maven-3.9.3 Development/apache-maven-3.9.3
+
+brendo@BrendoDell12:~$ ls -l Development
+total 8
+drwxr-xr-x  6 brendo brendo 4096 Jun 23 12:59 apache-maven-3.9.3
+drwxr-xr-x 16 brendo brendo 4096 Jun 28 08:24 IdeaProjects
+
+
+brendo@BrendoDell12:~$ cd Development/apache-maven-3.9.3
+
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3$ cd bin
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3/bin$ ./mvn --version
+
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /home/brendo/Development/apache-maven-3.9.3
+Java version: 19.0.2, vendor: Private Build, runtime: /usr/lib/jvm/java-19-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.15.0-75-generic", arch: "amd64", family: "unix"
+
+
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3/bin$ cd /
+brendo@BrendoDell12:/$ mvn -version
+Command 'mvn' not found, but can be installed with:
+sudo apt install maven
+
+brendo@BrendoDell12:/$ cd -
+/home/brendo/Development/apache-maven-3.9.3/bin
+
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3/bin$ ./mvn --version
+
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /home/brendo/Development/apache-maven-3.9.3
+Java version: 19.0.2, vendor: Private Build, runtime: /usr/lib/jvm/java-19-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.15.0-75-generic", arch: "amd64", family: "unix"
+
+
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3/bin$ export M2_HOME=/home/brendo/Development/apache-maven-3.9.3
+
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3/bin$ export PATH=${M2_HOME}/bin:${PATH}
+
+brendo@BrendoDell12:~/Development/apache-maven-3.9.3/bin$ cd /
+
+brendo@BrendoDell12:/$ mvn --version
+
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /home/brendo/Development/apache-maven-3.9.3
+Java version: 19.0.2, vendor: Private Build, runtime: /usr/lib/jvm/java-19-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.15.0-75-generic", arch: "amd64", family: "unix"
+
+Agora a variável de ambiente está configurada. Vamos podemos executar o build da aplicação com o comando mvn.
+
+brendo@BrendoDell12:/$ cd /home/brendo/Development/IdeaProjects/TesteMaven
+
+brendo@BrendoDell12:~/Development/IdeaProjects/TesteMaven$ mvn compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< org.example:TesteMaven >-----------------------
+[INFO] Building Archetype - TesteMaven 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ TesteMaven ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ TesteMaven ---
+[INFO] No sources to compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.704 s
+[INFO] Finished at: 2023-06-28T09:49:38-03:00
+[INFO] ------------------------------------------------------------------------
+
+mvn clean
+
+Realiza um refresh na aplicação.
+
+mvn test
+
+Executa os testes automatizados da aplicação.
+
+mvn package
+
+Gera o arquivo .jar da aplicação na pasta target. Além de realizar também, os 2 comandos anteriores.
+
+mvn install
+
+Gera o arquivo .jar do projeto no repositório local do Maven.
+
+mvn deploy
+
+Gera o arquivo .jar do projeto no remoto. Este repositório precisa estar configurado no pom.xml.

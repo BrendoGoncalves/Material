@@ -1,0 +1,77 @@
+Estrutura de Dados
+
+Organizar Dados
+    Inserir
+    Buscar
+    Remover
+    Processar
+
+Características
+    Lineares x Não Lineares
+    Homogêneas x Não Homogênea
+    Estática x Dinâmica
+
+Lista (List)
+    Sequencial
+        Arranjo (Array)
+    Encadeada
+        Simples
+        Duplo
+        Circulares
+
+Pilha (Stack)
+LIFO (Last in, Fisrt Out)
+    Estática
+    Dinâmica
+
+Fila (Queue)
+FIFO (First in, Firts Out)
+    Estática
+    Dinâmica
+        Deque
+        (Double-Ended Queue)
+
+Tabela de Hash (Hash Table)
+    (Map or Hashmap)
+    Chave
+    Valor
+    Função Hash
+    Colisões
+    Tratamento de Colisões
+
+Árvore
+(Tree)
+    Hierarquia
+    Raiz (Root)
+    Nó
+    Folhas
+    Altura
+    Grau
+        Árvore Binária de Busca
+        (Binary Search Tree)
+        Heap Binário
+        Árvore AVL
+        Árvore-B
+        Árvore Rubro Negra
+
+
+Grafo (Graph)
+    Vérices ou nós
+    Arestas ou Arcos (Edges)
+    Laço
+    Aresas Múltiplas
+    Passeio (Percurso) != Caminho
+        Grafo Direcionada
+            Grau
+        Grafo Não direcionada
+            Grau de Entrada
+            Grau de Saída
+        Grafo Ponderado
+            Peso
+    Matriz de Adjacência
+    Floresta
+    Exemplos
+        Algoritmo de Kruskal
+        Algoritmo de Prim
+        Algoritmo de Dijkastra (Caminho mais curto, pesos +)
+        Bellman-Ford Caminho mais curto, pesos -)

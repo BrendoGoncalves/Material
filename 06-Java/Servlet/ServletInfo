@@ -1,0 +1,33 @@
+Para saber mais: o que é Servlet?
+Próxima Atividade
+
+O Spring Framework oferece suporte ao desenvolvimento de aplicações web através do módulo Spring Web MVC. Esse módulo é baseado no padrão de design MVC (Model-View-Controller) e abstrai a utilização de Servlets, via classes Controller, para lidar com as requisições dos clientes.
+
+Mas afinal, o que é a especificação do Servlet? Ou melhor, o que significa um Servlet?
+
+O nome “Servlet” vem do inglês e remete a uma ideia de um pequeno servidor, cujo objetivo é receber requisições HTTP, processá-las e respondê-las adequadamente aos clientes. A especificação Servlet é uma especificação técnica que define como os Servlets devem ser criados, implementados e executados em um servidor web. Eles são componentes Java que estendem a classe jakarta.servlet.http.HttpServlet e são executados em um contêiner de servlet, como o Apache Tomcat, o Jetty ou o GlassFish. Esses contêineres de servlets são responsáveis por receber as requisições HTTP dos clientes, direcioná-las aos Servlets correspondentes e enviar as respostas de volta ao cliente.
+
+Vejamos um exemplo de uma classe Servlet em Java:
+
+@WebServlet(“/filmes”)
+public class CadastroFilmeServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String nomeFilme = request.getParameter("nome");
+
+        PrintWriter out = response.getWriter();
+
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Resposta do Cadastro de Filme</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>O filme cadastrado é: " + nomeFilme + "</h1>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+
+Antigamente, antes dos frameworks MVC Java serem criados, era assim que uma aplicação Web era desenvolvida, com a utilização de classes Servlet para lidar com requisições HTTP. Perceba no código anterior como é bem trabalhoso recuperar um parâmetro e devolver uma resposta html. Justamente por isso que os frameworks MVC, como o Spring, criaram abstrações para deixar tal tipo de código mais simples e enxuto.
+
+Uma classe controller é configurada e gerenciada automaticamente pelo framework Spring, permitindo que você se beneficie de seus recursos, como injeção de dependência, controle transacional, manipulação de exceções e validação, bem como a definição de rotas, processamento de formulários e integração com outros módulos Spring, o que torna o desenvolvimento de aplicações web mais simples e fácil de manter.

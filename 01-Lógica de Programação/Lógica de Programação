@@ -1,0 +1,92 @@
+Lógica de Programação
+
+Abordagem
+    Fluxograma
+    Pseudocódigo
+    Linguagem
+
+Algoritmos
+
+-Início
+
+Variáveis
+    Tipo: Identificador (Nome)
+    (Local, Global)
+    Atribuição
+
+    Início Letra
+    Alfanumérico
+    Não Espaço
+    Não Símbolo
+    Não Assento
+    Não Reservado
+
+Comandos de Entrada
+Comandos de Saída
+
+Operadores
+    Aritmético
+    Relacional
+    Lógico
+
+Estruturas
+    Condição
+    Repetição
+
+Rotinas
+    Procedimento
+    Funções
+
+Vetores
+    Unidimensionais
+    Bidimensionais
+-Fim
+
+
+Operadores Aritméticos
+    Adição
+    Subtração
+    Divisão
+    Multiplicação
+    Exponenciação
+    Módulo
+        (Ordem de Precedência)
+
+Operadores Relacionais
+    Igual
+    Maior
+    Maior Igual
+    Menor
+    Menor Igual
+    Diferente
+
+Operadores Lógicos
+    AND
+    OR
+    NOT
+        (Ordem de Precedência)
+
+Estrutura de Condição
+    Se - Senão
+        Simples
+            (Bloco 1)
+        Composta
+            (Bloco 1 ..N)
+    Escolha - Caso
+
+Estrutura de Repetição
+    Enquanto
+    Repita
+    Para
+
+Rotina
+    Procedimento
+    Função
+
+    Passagem de Parâmetros
+        Valor
+        Referência
+
+Práticas
+    Indentar
+    Aninhar
